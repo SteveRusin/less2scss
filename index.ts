@@ -23,7 +23,7 @@ async function start(projectPath: string) {
       await Promise.all(lessPath.map((filePath) => unlink(filePath)));
     }
 
-    if (componentName.length) {
+    if (componentName) {
       const componentPath = join(projectPath, componentName);
       const component = await readFile(componentPath, "utf-8");
       await writeFile(componentPath, updateFilePath(component), "utf-8");
