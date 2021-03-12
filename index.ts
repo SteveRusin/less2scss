@@ -7,7 +7,7 @@ import { initialPath } from './config';
 
 const recursively = true;
 
-const styleProp = /(styleUrls:.*\[(?<urls>.*)\])/gim;
+const styleProp = /(styleUrls:.*?\[(?<urls>.*?)\])/ims;
 
 async function start(projectPath: string) {
   const directory = await readdir(projectPath);
